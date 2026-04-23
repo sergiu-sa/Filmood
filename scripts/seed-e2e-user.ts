@@ -1,6 +1,6 @@
 /**
  * Idempotent: provisions the E2E Supabase user for tests/e2e/.
- * Reads admin creds from .env/.env.local, test creds from .env.test.local.
+ * Reads admin creds from .env.local, test creds from .env.test.local.
  * Run: npm run seed:e2e-user
  */
 
@@ -11,8 +11,7 @@ import path from "path";
 const repoRoot = path.resolve(__dirname, "..");
 
 // Admin creds first, test creds layered on top.
-loadEnv({ path: path.join(repoRoot, ".env") });
-loadEnv({ path: path.join(repoRoot, ".env.local"), override: false });
+loadEnv({ path: path.join(repoRoot, ".env.local") });
 loadEnv({ path: path.join(repoRoot, ".env.test.local"), override: false });
 
 function must(name: string): string {

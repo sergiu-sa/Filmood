@@ -87,7 +87,7 @@ export default function ProfileHero({ user }: Props) {
               {initial}
             </div>
             <div
-              className="absolute bottom-0 right-0 flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border text-[11px] transition-colors hover:border-[var(--border-h)]"
+              className="absolute bottom-0 right-0 flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border text-[11px] transition-colors hover:border-(--border-h)]"
               style={{
                 background: "var(--surface2)",
                 borderColor: "var(--border)",
@@ -160,7 +160,7 @@ export default function ProfileHero({ user }: Props) {
               {initial}
             </div>
             <div
-              className="absolute bottom-0 right-0 flex h-[26px] w-[26px] cursor-pointer items-center justify-center rounded-full border text-[11px] transition-colors hover:border-[var(--border-h)]"
+              className="absolute bottom-0 right-0 flex h-6.5 w-6.5 cursor-pointer items-center justify-center rounded-full border text-[11px] transition-colors hover:border-(--border-h)]"
               style={{
                 background: "var(--surface2)",
                 borderColor: "var(--border)",
@@ -173,7 +173,7 @@ export default function ProfileHero({ user }: Props) {
           {/* Info */}
           <div className="flex-1 min-w-0">
             <div
-              className="font-serif mb-[5px] text-[26px] font-semibold leading-[1.1]"
+              className="font-serif mb-1.25 text-[26px] font-semibold leading-[1.1]"
               style={{ color: "var(--t1)" }}
             >
               {displayName}
@@ -186,7 +186,7 @@ export default function ProfileHero({ user }: Props) {
             </div>
             <div className="flex flex-wrap items-center gap-2.5">
               <span
-                className="inline-flex items-center gap-[5px] rounded-full border px-2.5 py-1 text-[11px] font-medium leading-none"
+                className="inline-flex items-center gap-1.25 rounded-full border px-2.5 py-1 text-[11px] font-medium leading-none"
                 style={{
                   background: "var(--tag-bg)",
                   borderColor: "var(--tag-border)",
@@ -196,7 +196,7 @@ export default function ProfileHero({ user }: Props) {
                 📅 Member since {joinedDate}
               </span>
               <span
-                className="inline-flex items-center gap-[5px] rounded-full border px-2.5 py-1 text-[11px] font-medium leading-none"
+                className="inline-flex items-center gap-1.25 rounded-full border px-2.5 py-1 text-[11px] font-medium leading-none"
                 style={{
                   background: "var(--tag-bg)",
                   borderColor: "var(--tag-border)",
@@ -212,7 +212,8 @@ export default function ProfileHero({ user }: Props) {
           <div className="ml-auto shrink-0">
             <button
               onClick={signOut}
-              className="cursor-pointer rounded-[10px] border bg-transparent px-3.5 py-[7px] text-xs font-medium leading-none transition-all hover:text-[var(--t1)]"
+              className="cursor-pointer rounded-[10px] border bg-transparent px-3.5 py-
+               text-xs font-medium leading-none transition-all hover:text-(--t1)]"
               style={{ borderColor: "var(--border)", color: "var(--t2)" }}
             >
               Log out
@@ -234,7 +235,7 @@ export default function ProfileHero({ user }: Props) {
         {stats.map((stat, i) => (
           <div
             key={stat.label}
-            className={`py-3 text-center px-2 sm:px-3 md:px-[18px] ${
+            className={`py-3 text-center px-2 sm:px-3 md:px-4.5 ${
               i === 0
                 ? "rounded-l-xl"
                 : i === stats.length - 1
