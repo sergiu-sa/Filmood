@@ -41,7 +41,7 @@ export default function ToastContainer({ toasts }: ToastContainerProps) {
             borderRadius: "10px",
             background: "var(--surface)",
             border: "1px solid var(--border)",
-            boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
+            boxShadow: "0 4px 16px var(--overlay-weak)",
             fontSize: "13px",
             fontWeight: 500,
             color: "var(--t1)",

@@ -132,7 +132,7 @@ export default function AccountSettings({ user }: Props) {
         <button
           onClick={saveChanges}
           disabled={saving}
-          className="flex w-full cursor-pointer items-center justify-center rounded-[10px] border-none bg-(--gold) px-5 py-2.5 text-[13px] font-semibold text-[#0a0a0c] transition-all hover:brightness-110 disabled:opacity-60"
+          className="flex w-full cursor-pointer items-center justify-center rounded-[10px] border-none bg-(--gold) px-5 py-2.5 text-[13px] font-semibold text-(--accent-ink) transition-all hover:brightness-110 disabled:opacity-60"
         >
           {saving ? "Saving..." : "Save changes"}
         </button>

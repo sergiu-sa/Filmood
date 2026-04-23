@@ -150,7 +150,7 @@ export default function MoodPanel({
                 : {
                     background: "var(--gold-soft)",
                     color: "var(--gold)",
-                    borderColor: "rgba(196, 163, 90, 0.2)",
+                    borderColor: "rgba(var(--gold-rgb), 0.2)",
                   }),
             }}
           >
@@ -259,7 +259,7 @@ export default function MoodPanel({
               padding: "10px 20px",
               borderRadius: "10px",
               background: "var(--gold)",
-              color: "#0a0a0c",
+              color: "var(--accent-ink)",
               fontSize: "13px",
               fontWeight: 600,
               lineHeight: 1,

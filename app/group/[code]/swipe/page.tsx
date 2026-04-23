@@ -430,7 +430,7 @@ export default function GroupSwipePage() {
                 height: "56px",
                 borderRadius: "50%",
                 background: "var(--teal-soft)",
-                border: "1.5px solid rgba(90,170,143,0.25)",
+                border: "1.5px solid var(--teal-border)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -548,7 +548,7 @@ export default function GroupSwipePage() {
                         padding: "8px 12px",
                         borderRadius: "8px",
                         background: p.has_swiped ? "var(--teal-soft)" : "var(--surface2)",
-                        border: `1px solid ${p.has_swiped ? "rgba(90,170,143,0.15)" : "var(--border)"}`,
+                        border: `1px solid ${p.has_swiped ? "rgba(var(--teal-rgb), 0.15)" : "var(--border)"}`,
                         transition: "all 0.3s ease",
                       }}
                     >
@@ -591,7 +591,7 @@ export default function GroupSwipePage() {
                   border: "none",
                   fontSize: "14px",
                   fontWeight: 600,
-                  color: "#0a0a0c",
+                  color: "var(--accent-ink)",
                   transition: "all 0.25s",
                   animation: "fadeUp 0.4s ease both 0.2s",
                 }}

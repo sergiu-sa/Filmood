@@ -310,7 +310,7 @@ export default function SessionJoin({ initialCode = "" }: SessionJoinProps) {
           padding: "14px 36px",
           borderRadius: "var(--r)",
           background: loading || !isFilled ? "var(--surface2)" : "var(--gold)",
-          color: loading || !isFilled ? "var(--t3)" : "#0a0a0c",
+          color: loading || !isFilled ? "var(--t3)" : "var(--accent-ink)",
           fontSize: "14px",
           fontWeight: 600,
           border: "none",

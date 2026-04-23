@@ -431,7 +431,7 @@ export default function LobbyPage() {
                   padding: "10px 24px",
                   borderRadius: "var(--r)",
                   background: "var(--teal)",
-                  color: "#0a0a0c",
+                  color: "var(--accent-ink)",
                   fontSize: "13px",
                   fontWeight: 600,
                   border: "none",

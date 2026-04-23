@@ -75,7 +75,7 @@ export default function ProfileHero({ user }: Props) {
         <div className="flex items-start justify-between md:hidden mb-3">
           <div className="relative">
             <div
-              className="flex cursor-pointer items-center justify-center rounded-full border-[3px] text-[22px] font-bold leading-none text-[#0a0a0c] transition-shadow hover:shadow-[0_0_0_2px_var(--gold)]"
+              className="flex cursor-pointer items-center justify-center rounded-full border-[3px] text-[22px] font-bold leading-none text-(--accent-ink) transition-shadow hover:shadow-[0_0_0_2px_var(--gold)]"
               style={{
                 width: "68px",
                 height: "68px",
@@ -148,7 +148,7 @@ export default function ProfileHero({ user }: Props) {
           {/* Avatar */}
           <div className="relative shrink-0">
             <div
-              className="flex cursor-pointer items-center justify-center rounded-full border-[3px] text-[28px] font-bold leading-none text-[#0a0a0c] transition-shadow hover:shadow-[0_0_0_2px_var(--gold)]"
+              className="flex cursor-pointer items-center justify-center rounded-full border-[3px] text-[28px] font-bold leading-none text-(--accent-ink) transition-shadow hover:shadow-[0_0_0_2px_var(--gold)]"
               style={{
                 width: "84px",
                 height: "84px",

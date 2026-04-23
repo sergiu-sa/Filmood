@@ -78,7 +78,7 @@ export default function TopPickCard({
           borderRadius: "18px",
           overflow: "hidden",
           boxShadow:
-            "0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(196,163,90,0.15)",
+            "0 20px 60px var(--overlay-scrim), 0 0 0 1px rgba(var(--gold-rgb), 0.15)",
           display: isMobile ? "flex" : "grid",
           flexDirection: "column",
           gridTemplateColumns: `${posterWidth} 1fr`,
@@ -108,14 +108,14 @@ export default function TopPickCard({
               left: "16px",
               padding: "6px 12px",
               borderRadius: "100px",
-              background: "rgba(0,0,0,0.75)",
+              background: "var(--overlay-heavy)",
               backdropFilter: "blur(12px)",
               fontSize: "9px",
               fontWeight: 700,
               textTransform: "uppercase",
               letterSpacing: "1.8px",
               color: "var(--gold)",
-              border: "1px solid rgba(196,163,90,0.4)",
+              border: "1px solid rgba(var(--gold-rgb), 0.4)",
             }}
           >
             {tier === "perfect" ? "★ Perfect Match" : "★ Top Pick"}
@@ -353,7 +353,7 @@ export default function TopPickCard({
               padding: "14px 24px",
               borderRadius: "10px",
               background: "var(--gold)",
-              color: "#0a0a0c",
+              color: "var(--accent-ink)",
               fontSize: "13px",
               fontWeight: 700,
               textDecoration: "none",

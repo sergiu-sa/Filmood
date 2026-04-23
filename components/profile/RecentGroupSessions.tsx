@@ -167,7 +167,7 @@ export default function RecentGroupSessions() {
                   {session.participants.map((p, i) => (
                     <div
                       key={i}
-                      className="flex h-5 w-5 items-center justify-center rounded-full text-[8px] font-semibold text-[#0a0a0c]"
+                      className="flex h-5 w-5 items-center justify-center rounded-full text-[8px] font-semibold text-(--accent-ink)"
                       style={{
                         background: p.color,
                         marginLeft: i === 0 ? 0 : "-4px",

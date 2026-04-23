@@ -226,7 +226,7 @@ export default function ExplorePanel({ isOpen, onClose, embedded }: ExplorePanel
                 transition: "all 0.25s ease",
                 background: isActive ? "var(--surface)" : "transparent",
                 color: isActive ? "var(--t1)" : "var(--t3)",
-                boxShadow: isActive ? "0 1px 4px rgba(0,0,0,0.12)" : "none",
+                boxShadow: isActive ? "0 1px 4px var(--overlay-weak)" : "none",
               }}
             >
               {tab === "create" ? "Create session" : "Join with code"}
@@ -292,7 +292,7 @@ export default function ExplorePanel({ isOpen, onClose, embedded }: ExplorePanel
                     padding: "12px 24px",
                     borderRadius: "10px",
                     background: createLoading ? "var(--surface3)" : "var(--teal)",
-                    color: createLoading ? "var(--t3)" : "#0a0a0c",
+                    color: createLoading ? "var(--t3)" : "var(--accent-ink)",
                     fontSize: "13px",
                     fontWeight: 600,
                     border: "none",
@@ -322,7 +322,7 @@ export default function ExplorePanel({ isOpen, onClose, embedded }: ExplorePanel
                       padding: "10px 20px",
                       borderRadius: "10px",
                       background: "var(--teal)",
-                      color: "#0a0a0c",
+                      color: "var(--accent-ink)",
                       fontSize: "13px",
                       fontWeight: 600,
                       textDecoration: "none",
@@ -413,7 +413,7 @@ export default function ExplorePanel({ isOpen, onClose, embedded }: ExplorePanel
                   padding: "11px 20px",
                   borderRadius: "10px",
                   background: joinLoading ? "var(--surface3)" : "var(--gold)",
-                  color: joinLoading ? "var(--t3)" : "#0a0a0c",
+                  color: joinLoading ? "var(--t3)" : "var(--accent-ink)",
                   fontSize: "13px",
                   fontWeight: 600,
                   border: "none",
@@ -488,7 +488,7 @@ export default function ExplorePanel({ isOpen, onClose, embedded }: ExplorePanel
             fontWeight: 500,
             lineHeight: 1,
             textDecoration: "none",
-            border: "1px solid rgba(90, 170, 143, 0.2)",
+            border: "1px solid rgba(var(--teal-rgb), 0.2)",
             transition: "all var(--t-base)",
           }}
         >

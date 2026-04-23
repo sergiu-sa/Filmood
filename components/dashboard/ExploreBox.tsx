@@ -192,7 +192,7 @@ export default function ExploreBox({
           padding: "9px",
           borderRadius: "10px",
           background: "var(--teal-soft)",
-          border: "1px solid rgba(90, 170, 143, 0.2)",
+          border: "1px solid rgba(var(--teal-rgb), 0.2)",
           color: "var(--teal)",
           fontSize: "12px",
           fontWeight: 600,

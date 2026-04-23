@@ -394,7 +394,7 @@ export default function GroupResultsPage() {
               padding: "12px 28px",
               borderRadius: "10px",
               background: "var(--gold)",
-              color: "#0a0a0c",
+              color: "var(--accent-ink)",
               fontSize: "13px",
               fontWeight: 700,
               textDecoration: "none",

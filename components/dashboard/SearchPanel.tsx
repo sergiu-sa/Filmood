@@ -377,7 +377,7 @@ export default function SearchPanel({
               background: "var(--blue-soft)",
               padding: "4px 10px",
               borderRadius: "100px",
-              border: "1px solid rgba(91,143,212,0.15)",
+              border: "1px solid rgba(var(--blue-rgb), 0.15)",
               whiteSpace: "nowrap",
             }}
           >
@@ -533,7 +533,7 @@ export default function SearchPanel({
                 transition: "all 0.22s cubic-bezier(0.22, 1, 0.36, 1)",
                 border: "1px solid",
                 borderColor: isActive
-                  ? "rgba(91,143,212,0.3)"
+                  ? "rgba(var(--blue-rgb), 0.3)"
                   : "var(--tag-border)",
                 background: isActive ? "var(--blue-soft)" : "var(--tag-bg)",
                 color: isActive ? "var(--blue)" : "var(--t2)",
@@ -593,7 +593,7 @@ export default function SearchPanel({
                   border: "1px solid",
                   animationDelay: `${i * 30}ms`,
                   borderColor: isActive
-                    ? "rgba(91,143,212,0.35)"
+                    ? "rgba(var(--blue-rgb), 0.35)"
                     : "var(--tag-border)",
                   background: isActive ? "var(--blue-soft)" : "var(--tag-bg)",
                   color: isActive ? "var(--blue)" : "var(--t3)",

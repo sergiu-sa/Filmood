@@ -29,7 +29,7 @@ const VOTE_BUTTONS: {
     label: "Nah",
     color: "var(--rose)",
     hoverBg: "var(--rose)",
-    hoverText: "#fff",
+    hoverText: "var(--accent-paper)",
     size: 56,
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
@@ -42,7 +42,7 @@ const VOTE_BUTTONS: {
     label: "Maybe",
     color: "var(--gold)",
     hoverBg: "var(--gold)",
-    hoverText: "#0a0a0c",
+    hoverText: "var(--accent-ink)",
     size: 46,
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -55,7 +55,7 @@ const VOTE_BUTTONS: {
     label: "Yes",
     color: "var(--teal)",
     hoverBg: "var(--teal)",
-    hoverText: "#0a0a0c",
+    hoverText: "var(--accent-ink)",
     size: 56,
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

@@ -6,12 +6,12 @@ import type { AccentColor } from "./types";
  * in lobby, swipe, and results.
  */
 export const AVATAR_COLORS: { bg: string; text: string }[] = [
-  { bg: "var(--teal)", text: "#0a0a0c" },
-  { bg: "var(--gold)", text: "#0a0a0c" },
-  { bg: "var(--blue)", text: "#fff" },
-  { bg: "var(--violet)", text: "#fff" },
-  { bg: "var(--rose)", text: "#fff" },
-  { bg: "var(--ember)", text: "#0a0a0c" },
+  { bg: "var(--teal)", text: "var(--accent-ink)" },
+  { bg: "var(--gold)", text: "var(--accent-ink)" },
+  { bg: "var(--blue)", text: "var(--accent-paper)" },
+  { bg: "var(--violet)", text: "var(--accent-paper)" },
+  { bg: "var(--rose)", text: "var(--accent-paper)" },
+  { bg: "var(--ember)", text: "var(--accent-ink)" },
 ];
 
 /**

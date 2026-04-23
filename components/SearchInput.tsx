@@ -119,7 +119,7 @@ export default function SearchInput({ onResults, onLoading }: SearchInputProps) 
             className="px-4 py-1.5 rounded-full text-sm font-medium border transition-all duration-200 cursor-pointer"
             style={{
               background: filter === value ? "var(--gold)" : "transparent",
-              color: filter === value ? "#0a0a0c" : "var(--t3)",
+              color: filter === value ? "var(--accent-ink)" : "var(--t3)",
               borderColor: filter === value ? "var(--gold)" : "var(--border)",
             }}
           >

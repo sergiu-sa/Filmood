@@ -21,7 +21,7 @@ export function chipStyle(
       ? {
           background: "var(--rose-soft)",
           color: "var(--rose)",
-          borderColor: "rgba(196, 107, 124, 0.25)",
+          borderColor: "rgba(var(--rose-rgb), 0.25)",
         }
       : isActive
         ? {

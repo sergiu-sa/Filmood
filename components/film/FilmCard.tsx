@@ -43,7 +43,7 @@ export default function FilmCard({
           const card = e.currentTarget as HTMLDivElement;
           card.style.borderColor = accent;
           card.style.transform = "translateY(-2px)";
-          card.style.boxShadow = "0 8px 24px rgba(0,0,0,0.12)";
+          card.style.boxShadow = "0 8px 24px var(--overlay-weak)";
         }}
         onMouseLeave={(e) => {
           const card = e.currentTarget as HTMLDivElement;
@@ -87,7 +87,7 @@ export default function FilmCard({
               fontSize: "11px",
               fontWeight: 700,
               lineHeight: 1,
-              color: "#FFD84D",
+              color: "var(--gold)",
               background: "rgba(10,10,12,0.82)",
               border: "1px solid rgba(255,255,255,0.06)",
               boxShadow: "0 6px 18px rgba(0,0,0,0.24)",

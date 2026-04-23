@@ -115,7 +115,7 @@ export default function Navbar() {
                 fontSize: "12px",
                 fontWeight: 500,
                 background: "var(--gold)",
-                color: "#0a0a0c",
+                color: "var(--accent-ink)",
                 border: "none",
               }}
             >
@@ -150,7 +150,7 @@ export default function Navbar() {
                   background: "var(--gold)",
                   fontSize: "12px",
                   fontWeight: 600,
-                  color: "#0a0a0c",
+                  color: "var(--accent-ink)",
                 }}
               >
                 {user.email?.[0]?.toUpperCase() || "U"}

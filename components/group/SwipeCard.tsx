@@ -55,13 +55,13 @@ export default function SwipeCard({
   let glowLabel = "";
   if (isDragging) {
     if (dragOffset.x > 40) {
-      glowColor = "rgba(90,170,143,0.25)";
+      glowColor = "var(--teal-border)";
       glowLabel = "Yes";
     } else if (dragOffset.x < -40) {
-      glowColor = "rgba(196,107,124,0.25)";
+      glowColor = "var(--rose-border)";
       glowLabel = "Nah";
     } else if (dragOffset.y < -40) {
-      glowColor = "rgba(196,163,90,0.25)";
+      glowColor = "var(--gold-border)";
       glowLabel = "Maybe";
     }
   }

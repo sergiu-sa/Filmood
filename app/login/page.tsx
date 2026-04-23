@@ -130,33 +130,33 @@ export default function LoginPage() {
             {[
               {
                 label: "Cozy and warm",
-                color: "rgba(196,163,90,0.7)",
-                border: "rgba(196,163,90,0.25)",
+                color: "rgba(var(--gold-rgb), 0.7)",
+                border: "var(--gold-border)",
               },
               {
                 label: "On the edge",
-                color: "rgba(212,122,74,0.7)",
-                border: "rgba(212,122,74,0.25)",
+                color: "rgba(var(--ember-rgb), 0.7)",
+                border: "var(--ember-border)",
               },
               {
                 label: "Mind-bending",
-                color: "rgba(91,143,212,0.7)",
-                border: "rgba(91,143,212,0.25)",
+                color: "rgba(var(--blue-rgb), 0.7)",
+                border: "var(--blue-border)",
               },
               {
                 label: "Butterflies",
-                color: "rgba(196,107,124,0.7)",
-                border: "rgba(196,107,124,0.25)",
+                color: "rgba(var(--rose-rgb), 0.7)",
+                border: "var(--rose-border)",
               },
               {
                 label: "Deeply moved",
-                color: "rgba(139,108,196,0.7)",
-                border: "rgba(139,108,196,0.25)",
+                color: "rgba(var(--violet-rgb), 0.7)",
+                border: "var(--violet-border)",
               },
               {
                 label: "Easy and light",
-                color: "rgba(90,170,143,0.7)",
-                border: "rgba(90,170,143,0.25)",
+                color: "rgba(var(--teal-rgb), 0.7)",
+                border: "var(--teal-border)",
               },
             ].map((pill) => (
               <span
@@ -230,7 +230,7 @@ export default function LoginPage() {
                 className="mb-5 rounded-xl border px-4 py-3 text-sm"
                 style={{
                   background: "var(--rose-soft)",
-                  borderColor: "rgba(196,107,124,0.2)",
+                  borderColor: "rgba(var(--rose-rgb), 0.2)",
                   color: "var(--rose)",
                 }}
               >
@@ -340,7 +340,7 @@ export default function LoginPage() {
               type="submit"
               disabled={loading}
               className="w-full cursor-pointer rounded-xl border-none py-3.5 text-sm font-semibold transition-all hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed"
-              style={{ background: "var(--gold)", color: "#0a0a0c" }}
+              style={{ background: "var(--gold)", color: "var(--accent-ink)" }}
             >
               {loading ? "Logging in..." : "Log in"}
             </button>

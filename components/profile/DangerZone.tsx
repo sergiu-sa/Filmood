@@ -37,7 +37,7 @@ export default function DangerZone() {
   ];
 
   return (
-    <div className="rounded-2xl border border-(--rose-soft,rgba(196,107,124,0.1)) bg-(--surface) p-5">
+    <div className="rounded-2xl border border-(--rose-soft,rgba(var(--rose-rgb), 0.1)) bg-(--surface) p-5">
       {/* Section heading */}
       <div className="mb-3.5 text-xs font-semibold uppercase tracking-[1px] text-(--rose)">
         Danger zone
@@ -48,7 +48,7 @@ export default function DangerZone() {
           key={row.title}
           className={`flex items-center justify-between gap-4 py-2.5 ${
             i < actions.length - 1
-              ? "border-b border-(--rose-soft,rgba(196,107,124,0.1))"
+              ? "border-b border-(--rose-soft,rgba(var(--rose-rgb), 0.1))"
               : ""
           } ${i === 0 ? "pt-0" : ""}`}
         >
@@ -63,7 +63,7 @@ export default function DangerZone() {
             onClick={row.action}
             className={`shrink-0 cursor-pointer rounded-lg px-3.5 py-1.5 text-xs font-medium transition-all ${
               row.danger
-                ? "border border-[rgba(196,107,124,0.2)] bg-transparent text-(--rose) hover:bg-(--rose-soft) hover:border-(--rose)"
+                ? "border border-[rgba(var(--rose-rgb), 0.2)] bg-transparent text-(--rose) hover:bg-(--rose-soft) hover:border-(--rose)"
                 : "border border-(--border) bg-transparent text-(--t2) hover:border-(--border-h) hover:text-(--t1)"
             }`}
           >

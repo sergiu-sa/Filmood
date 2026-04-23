@@ -119,7 +119,7 @@ export default function MoodBox({
           padding: "9px",
           borderRadius: "10px",
           background: "var(--gold-soft)",
-          border: "1px solid rgba(196, 163, 90, 0.2)",
+          border: "1px solid rgba(var(--gold-rgb), 0.2)",
           color: "var(--gold)",
           fontSize: "12px",
           fontWeight: 600,

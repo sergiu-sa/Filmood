@@ -426,7 +426,7 @@ function BrowseContent() {
                   background: "var(--blue-soft)",
                   padding: "5px 12px",
                   borderRadius: "100px",
-                  border: "1px solid rgba(91,143,212,0.15)",
+                  border: "1px solid rgba(var(--blue-rgb), 0.15)",
                   whiteSpace: "nowrap",
                   marginBottom: "4px",
                 }}
@@ -559,7 +559,7 @@ function BrowseContent() {
                     transition: "all 0.22s cubic-bezier(0.22, 1, 0.36, 1)",
                     border: "1px solid",
                     borderColor: isActive
-                      ? "rgba(91,143,212,0.3)"
+                      ? "rgba(var(--blue-rgb), 0.3)"
                       : "var(--tag-border)",
                     background: isActive ? "var(--blue-soft)" : "var(--tag-bg)",
                     color: isActive ? "var(--blue)" : "var(--t2)",
@@ -617,7 +617,7 @@ function BrowseContent() {
                       border: "1px solid",
                       animationDelay: `${i * 25}ms`,
                       borderColor: isActive
-                        ? "rgba(91,143,212,0.35)"
+                        ? "rgba(var(--blue-rgb), 0.35)"
                         : "var(--tag-border)",
                       background: isActive
                         ? "var(--blue-soft)"

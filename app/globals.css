@@ -72,6 +72,30 @@
   --teal-border:   rgba(90, 170, 143, 0.25);
   --ember-border:  rgba(212, 122, 74, 0.25);
 
+  /* Accent RGB triplets — compose tints at arbitrary alpha:
+     rgb(var(--gold-rgb) / 0.7). Prefer --*-soft / --*-glow / --*-border
+     for the common 10% / 8% / 25% cases. */
+  --gold-rgb:   196, 163, 90;
+  --blue-rgb:   91, 143, 212;
+  --rose-rgb:   196, 107, 124;
+  --violet-rgb: 139, 108, 196;
+  --teal-rgb:   90, 170, 143;
+  --ember-rgb:  212, 122, 74;
+
+  /* Contrast text on accent-colored backgrounds. Stays fixed in both themes
+     because the accent fills don't flip — a gold button stays gold, so the
+     readable text on top is always dark-or-near-white depending on the
+     accent's luminance. */
+  --accent-ink:   #0a0a0c;
+  --accent-paper: #ffffff;
+
+  /* Dark overlay tokens — scrims over posters, floating badge backgrounds,
+     subtle card shadows. Values are fixed in both themes because overlays
+     darken content regardless of mode. */
+  --overlay-weak:  rgba(0, 0, 0, 0.12);
+  --overlay-scrim: rgba(0, 0, 0, 0.4);
+  --overlay-heavy: rgba(0, 0, 0, 0.75);
+
   /* Fonts */
   --serif: var(--font-serif), Georgia, serif;
   --sans: var(--font-sans), system-ui, sans-serif;
@@ -143,6 +167,13 @@
   --violet-border: rgba(106, 78, 168, 0.25);
   --teal-border:   rgba(58, 138, 112, 0.25);
   --ember-border:  rgba(176, 90, 42, 0.25);
+
+  --gold-rgb:   154, 125, 48;
+  --blue-rgb:   58, 111, 184;
+  --rose-rgb:   168, 72, 88;
+  --violet-rgb: 106, 78, 168;
+  --teal-rgb:   58, 138, 112;
+  --ember-rgb:  176, 90, 42;
 }
 
 /* ═══════════════════════════════════════════════════════════

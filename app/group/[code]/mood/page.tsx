@@ -617,7 +617,7 @@ export default function GroupMoodPage() {
                       padding: "8px 12px",
                       borderRadius: "8px",
                       background: p.hasSubmitted ? "var(--violet-soft)" : "var(--surface2)",
-                      border: `1px solid ${p.hasSubmitted ? "rgba(139,108,196,0.15)" : "var(--border)"}`,
+                      border: `1px solid ${p.hasSubmitted ? "rgba(var(--violet-rgb), 0.15)" : "var(--border)"}`,
                       transition: "all 0.3s ease",
                     }}
                   >

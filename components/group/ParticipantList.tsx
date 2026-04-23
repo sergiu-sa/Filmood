@@ -150,7 +150,7 @@ export default function ParticipantList({
                     height: "16px",
                     borderRadius: "50%",
                     background: "var(--teal)",
-                    color: "#0a0a0c",
+                    color: "var(--accent-ink)",
                     fontSize: "9px",
                     fontWeight: 700,
                     display: "flex",
