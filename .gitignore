@@ -44,3 +44,6 @@ next-env.d.ts
 
 #Sergiu's personal notes files
 /docs
+
+# brainstorming companion (mockups & events)
+/.superpowers
