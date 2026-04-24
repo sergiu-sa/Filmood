@@ -22,6 +22,16 @@ export interface MoodConfig {
   voteAverageGte?: number;
   /** TMDB keyword IDs joined with OR into with_keywords for sharper targeting. */
   keywords?: number[];
+  /**
+   * Hand-curated "signature" film used by the home hero to represent this mood.
+   * posterPath is TMDB's /<size>/path.jpg (relative); fill via scripts/fetch-signature-posters.ts.
+   */
+  signatureFilm?: {
+    tmdbId: number;
+    title: string;
+    year: number;
+    posterPath: string | null;
+  };
 }
 
 export type EraKey = "classic" | "modern" | "fresh";

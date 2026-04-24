@@ -4,7 +4,7 @@ import { allMoods } from "@/lib/moodMap";
 import MoodCard from "./MoodCard";
 import CollapsedBoxRail from "./CollapsedBoxRail";
 
-const PREVIEW_KEYS = ["laugh", "escape", "unsettled", "thoughtful"];
+const PREVIEW_KEYS = ["laugh", "escape", "unsettled", "thoughtful", "beautiful", "easy"];
 const previewMoods = allMoods.filter((m) => PREVIEW_KEYS.includes(m.key));
 
 interface MoodBoxProps {
@@ -89,9 +89,9 @@ export default function MoodBox({
         Select how you want to feel — we&apos;ll find the film.
       </p>
 
-      {/* 2x2 preview grid */}
+      {/* 3x2 preview grid */}
       <div
-        className="grid grid-cols-2 gap-4 mb-2.5"
+        className="grid grid-cols-3 gap-3 mb-2.5"
         onClick={(e) => e.stopPropagation()}
       >
         {previewMoods.map((mood) => (

@@ -18,6 +18,7 @@ export const moodMap: Record<string, MoodConfig> = {
     excludeGenres: [27],
     sortBy: "popularity.desc",
     voteCountGte: 500,
+    signatureFilm: { tmdbId: 346698, title: "Barbie", year: 2023, posterPath: "/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg" },
   },
   beautiful: {
     key: "beautiful",
@@ -29,6 +30,7 @@ export const moodMap: Record<string, MoodConfig> = {
     sortBy: "vote_average.desc",
     voteCountGte: 200,
     voteAverageGte: 7.0,
+    signatureFilm: { tmdbId: 666277, title: "Past Lives", year: 2023, posterPath: "/k3waqVXSnvCZWfJYNtdamTgTtTA.jpg" },
   },
   unsettled: {
     key: "unsettled",
@@ -40,6 +42,7 @@ export const moodMap: Record<string, MoodConfig> = {
     sortBy: "vote_average.desc",
     voteCountGte: 300,
     voteAverageGte: 6.5,
+    signatureFilm: { tmdbId: 467244, title: "The Zone of Interest", year: 2023, posterPath: "/hUu9zyZmDd8VZegKi1iK1Vk0RYS.jpg" },
   },
   thrilling: {
     key: "thrilling",
@@ -51,6 +54,7 @@ export const moodMap: Record<string, MoodConfig> = {
     excludeGenres: [35],
     sortBy: "popularity.desc",
     voteCountGte: 400,
+    signatureFilm: { tmdbId: 575264, title: "Mission: Impossible - Dead Reckoning Part One", year: 2023, posterPath: "/NNxYkU70HPurnNCSiCjYAmacwm.jpg" },
   },
   thoughtful: {
     key: "thoughtful",
@@ -62,6 +66,7 @@ export const moodMap: Record<string, MoodConfig> = {
     sortBy: "vote_average.desc",
     voteCountGte: 200,
     voteAverageGte: 7.5,
+    signatureFilm: { tmdbId: 693134, title: "Dune: Part Two", year: 2024, posterPath: "/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" },
   },
   easy: {
     key: "easy",
@@ -74,6 +79,7 @@ export const moodMap: Record<string, MoodConfig> = {
     voteCountGte: 300,
     voteAverageGte: 7.0,
     keywords: [6054],
+    signatureFilm: { tmdbId: 840430, title: "The Holdovers", year: 2023, posterPath: "/VHSzNBTwxV8vh7wylo7O9CLdac.jpg" },
   },
   cry: {
     key: "cry",
@@ -85,6 +91,7 @@ export const moodMap: Record<string, MoodConfig> = {
     sortBy: "vote_average.desc",
     voteCountGte: 200,
     voteAverageGte: 7.0,
+    signatureFilm: { tmdbId: 994108, title: "All of Us Strangers", year: 2023, posterPath: "/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg" },
   },
   escape: {
     key: "escape",
@@ -96,6 +103,7 @@ export const moodMap: Record<string, MoodConfig> = {
     sortBy: "vote_average.desc",
     voteCountGte: 200,
     voteAverageGte: 7.0,
+    signatureFilm: { tmdbId: 792307, title: "Poor Things", year: 2023, posterPath: "/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg" },
   },
   family: {
     key: "family",
@@ -106,6 +114,7 @@ export const moodMap: Record<string, MoodConfig> = {
     genres: [10751, 16, 35],
     sortBy: "popularity.desc",
     voteCountGte: 300,
+    signatureFilm: { tmdbId: 569094, title: "Spider-Man: Across the Spider-Verse", year: 2023, posterPath: "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" },
   },
   inspiring: {
     key: "inspiring",
@@ -117,6 +126,7 @@ export const moodMap: Record<string, MoodConfig> = {
     sortBy: "vote_average.desc",
     voteCountGte: 200,
     voteAverageGte: 7.5,
+    signatureFilm: { tmdbId: 872585, title: "Oppenheimer", year: 2023, posterPath: "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" },
   },
   datenight: {
     key: "datenight",
@@ -129,6 +139,7 @@ export const moodMap: Record<string, MoodConfig> = {
     sortBy: "popularity.desc",
     voteCountGte: 400,
     keywords: [6054, 9799],
+    signatureFilm: { tmdbId: 1072790, title: "Anyone But You", year: 2023, posterPath: "/5qHoazZiaLe7oFBok7XlUhg96f2.jpg" },
   },
   nostalgic: {
     key: "nostalgic",
@@ -141,6 +152,7 @@ export const moodMap: Record<string, MoodConfig> = {
     voteCountGte: 200,
     voteAverageGte: 7.0,
     keywords: [180547],
+    signatureFilm: { tmdbId: 391713, title: "Lady Bird", year: 2017, posterPath: "/gl66K7zRdtNYGrxyS2YDUP5ASZd.jpg" },
   },
   mindbending: {
     key: "mindbending",
@@ -153,6 +165,7 @@ export const moodMap: Record<string, MoodConfig> = {
     voteCountGte: 300,
     voteAverageGte: 7.0,
     keywords: [10714, 4565],
+    signatureFilm: { tmdbId: 545611, title: "Everything Everywhere All at Once", year: 2022, posterPath: "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg" },
   },
   dark: {
     key: "dark",
@@ -165,6 +178,7 @@ export const moodMap: Record<string, MoodConfig> = {
     voteCountGte: 300,
     voteAverageGte: 6.8,
     keywords: [1701],
+    signatureFilm: { tmdbId: 800158, title: "The Killer", year: 2023, posterPath: "/ipkcgvN7h3yZnbYowthloHLKsf4.jpg" },
   },
   weird: {
     key: "weird",
@@ -177,6 +191,7 @@ export const moodMap: Record<string, MoodConfig> = {
     voteCountGte: 150,
     voteAverageGte: 6.8,
     keywords: [9840],
+    signatureFilm: { tmdbId: 798286, title: "Beau Is Afraid", year: 2023, posterPath: "/wgVkkjigF31r1nZV80uV0xNIoun.jpg" },
   },
 };
 

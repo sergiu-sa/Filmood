@@ -26,11 +26,13 @@ export async function GET() {
           id: number;
           title: string;
           genre_ids: number[];
+          poster_path: string | null;
           backdrop_path: string | null;
         }) => ({
           id: f.id,
           title: f.title,
           genre_ids: f.genre_ids,
+          poster_path: f.poster_path,
           backdrop_path: f.backdrop_path,
         }),
       );

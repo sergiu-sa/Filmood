@@ -4,15 +4,34 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import { useMediaQuery } from "@/lib/useMediaQuery";
 import MoodBox from "./MoodBox";
 import MoodPanel from "./MoodPanel";
-import SearchBox from "./SearchBox";
+import TrendingBox from "./TrendingBox";
+import SearchToolbar from "./SearchToolbar";
 import SearchPanel from "./SearchPanel";
 import ExploreBox from "./ExploreBox";
 import ExplorePanel from "./ExplorePanel";
 import BottomSheet from "./BottomSheet";
 import type { Film } from "@/lib/types";
 
-export default function DashboardShell() {
-  const [selectedMoods, setSelectedMoods] = useState<Set<string>>(new Set());
+export default function DashboardShell({
+  selectedMoods: selectedMoodsProp,
+  onSelectMood: onSelectMoodProp,
+}: {
+  selectedMoods?: Set<string>;
+  onSelectMood?: (key: string) => void;
+} = {}) {
+  const [localSelectedMoods, setLocalSelectedMoods] = useState<Set<string>>(new Set());
+  const selectedMoods = selectedMoodsProp ?? localSelectedMoods;
+  const handleSelectMood =
+    onSelectMoodProp ??
+    ((key: string) => {
+      setLocalSelectedMoods((prev) => {
+        const next = new Set(prev);
+        if (next.has(key)) next.delete(key);
+        else next.add(key);
+        return next;
+      });
+    });
+
   const [openPanel, setOpenPanel] = useState<string | null>(null);
   const [searchResults, setSearchResults] = useState<Film[]>([]);
   const [panelCategory, setPanelCategory] = useState<string | null>(null);
@@ -40,18 +59,6 @@ export default function DashboardShell() {
     }, 150);
     return () => clearTimeout(timeout);
   }, [openPanel, isMobile]);
-
-  const handleSelectMood = useCallback((key: string) => {
-    setSelectedMoods((prev) => {
-      const next = new Set(prev);
-      if (next.has(key)) {
-        next.delete(key);
-      } else {
-        next.add(key);
-      }
-      return next;
-    });
-  }, []);
 
   const togglePanel = (panel: string) => {
     setOpenPanel((prev) => (prev === panel ? null : panel));
@@ -129,30 +136,28 @@ export default function DashboardShell() {
     />
   );
 
-  // Desktop only: redistribute the three-column grid so the active box grows
-  // (~2fr) and the other two collapse into slim rails (~0.6fr each). When no
-  // panel is open, `undefined` lets the Tailwind `grid-cols-3` class take over
-  // with equal widths. Mobile always falls back to the single-column class.
-  const gridTemplateColumns =
-    !isMobile && openPanel
-      ? openPanel === "mood"
-        ? "2fr 0.6fr 0.6fr"
-        : openPanel === "explore"
-          ? "0.6fr 2fr 0.6fr"
-          : "0.6fr 0.6fr 2fr"
-      : undefined;
-
   const isBoxCollapsed = (key: string) =>
     !isMobile && openPanel !== null && openPanel !== key;
 
   return (
-    <div id="dashboard" className="mx-auto" style={{ maxWidth: "1400px" }}>
+    <div id="dashboard" className="mx-auto" style={{ maxWidth: 1400 }}>
+      <SearchToolbar
+        onResults={handleSearchResults}
+        onActiveCategory={handleActiveCategory}
+        onExpand={() => setOpenPanel("search")}
+        onCategoryFetch={handlePanelCategoryChange}
+      />
+
       <div
         className="grid grid-cols-1 min-[900px]:grid-cols-3"
         style={{
-          gap: "10px",
-          padding: "10px 28px",
-          gridTemplateColumns,
+          gap: 10,
+          padding: "0 28px",
+          gridTemplateColumns: !isMobile && openPanel
+            ? openPanel === "mood"     ? "2fr 0.6fr 0.6fr"
+            : openPanel === "explore"  ? "0.6fr 2fr 0.6fr"
+                                       : "0.6fr 0.6fr 2fr"
+            : !isMobile ? "1.4fr 0.8fr 0.8fr" : undefined,
           transition: "grid-template-columns 0.45s cubic-bezier(0.4, 0, 0.2, 1)",
           alignItems: "stretch",
         }}
@@ -169,9 +174,7 @@ export default function DashboardShell() {
           isExpanded={openPanel === "explore"}
           isCollapsed={isBoxCollapsed("explore")}
         />
-        <SearchBox
-          onResults={handleSearchResults}
-          onActiveCategory={handleActiveCategory}
+        <TrendingBox
           onExpand={() => setOpenPanel("search")}
           isExpanded={openPanel === "search"}
           isCollapsed={isBoxCollapsed("search")}
@@ -196,26 +199,20 @@ export default function DashboardShell() {
             onCategoryChange={handlePanelCategoryChange}
             onClose={closePanel}
           />
-          <ExplorePanel
-            isOpen={openPanel === "explore"}
-            onClose={closePanel}
-          />
+          <ExplorePanel isOpen={openPanel === "explore"} onClose={closePanel} />
         </div>
       )}
 
-      {/* Mobile: bottom sheet overlay */}
+      {/* Mobile: bottom sheet */}
       {isMobile && (
         <BottomSheet
           isOpen={openPanel !== null}
           onClose={closePanel}
           accentColor={
-            openPanel === "mood"
-              ? "var(--gold)"
-              : openPanel === "explore"
-                ? "var(--teal)"
-                : openPanel === "search"
-                  ? "var(--blue)"
-                  : undefined
+            openPanel === "mood" ? "var(--gold)"
+            : openPanel === "explore" ? "var(--teal)"
+            : openPanel === "search" ? "var(--blue)"
+            : undefined
           }
         >
           {openPanel === "mood" && moodPanelContent}
